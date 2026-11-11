@@ -23,6 +23,7 @@ xcrun swiftc -O -swift-version 5 \
     -o "$app_dir/Contents/MacOS/DockPup"
 cp "$project_dir/Resources/Info.plist" "$app_dir/Contents/Info.plist"
 cp "$project_dir/LICENSE" "$app_dir/Contents/Resources/LICENSE"
+cp -R "$project_dir/Resources/"*.lproj "$app_dir/Contents/Resources/"
 codesign --force --sign - --identifier local.g.lockdog "$app_dir"
 touch "$app_dir"
 printf 'Built: %s\n' "$app_dir"

@@ -24,6 +24,7 @@ Accessibility permission refreshed; see the README.
 - `Sources/DockPup/Display.swift`: display geometry and exposed bottom edges.
 - `Resources/AppIcon.png`: editable raster artwork; the build generates ICNS sizes.
 - `Resources/Info.plist`: application metadata.
+- `Resources/*.lproj/Localizable.strings`: localized interface text.
 - `scripts/build.sh`: native build, icon generation, and local signing.
 
 The bundle identifier `local.g.lockdog` is a stable system identity, independent
@@ -60,8 +61,11 @@ CPU architecture, display arrangement, and results of these manual checks:
 ## Scope and style
 
 Keep changes small and preserve the dependency-free native implementation.
-Use English for code comments, menu text, issues, and pull requests. Keep
+Use English for code comments, source message keys, issues, and pull requests. Keep
 `README.zh-CN.md` consistent when changing documented behavior.
+Keep interface translations in the `.strings` files, using matching keys and
+format placeholders across languages. Controller messages stay in English for
+diagnostics; their displayed translations use concise wording.
 
 Do not include build outputs, profiler captures, personal paths, or unredacted
 system logs in a pull request. Application status logs can be inspected with:

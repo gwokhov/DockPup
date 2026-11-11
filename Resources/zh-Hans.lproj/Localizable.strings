@@ -1,0 +1,43 @@
+/* Copyright (C) 2026 Gwokhou
+ * SPDX-License-Identifier: GPL-3.0-or-later */
+
+/* Menu controls and information. */
+"Enable Locking" = "启用锁定";
+"Launch at Login" = "登录时启动";
+"Launch at Login (Approval Required…)" = "登录时启动（需要批准…）";
+"Move Dock / Retry" = "迁入 Dock / 重试";
+"Grant Accessibility Access…" = "授权辅助功能…";
+"Quit DockPup" = "退出 DockPup";
+"Target: %@" = "目标屏幕：%@";
+"Blocked: %ld · Last event: %@" = "已拦截：%ld · 最近事件：%@";
+"DockPup: %@" = "DockPup：%@";
+"Could Not Update Launch at Login" = "无法更改登录启动设置";
+
+/* Concise display text for the controller's English diagnostic messages. */
+"Starting" = "正在启动…";
+"Waiting for a display" = "等待显示器连接";
+"No display detected" = "未检测到显示器";
+"Paused" = "已暂停";
+"Sleeping; waiting to wake" = "等待唤醒";
+"Single display; no guarding needed" = "单屏模式";
+"Only one external display is supported" = "仅支持一个外接屏";
+"Set the system Dock position to Bottom" = "请将 Dock 设为底部";
+"Enable ‘Displays have separate Spaces’" = "请开启显示器的独立空间";
+"Offset the displays to expose at least 8 points of the external display’s bottom edge" = "外接屏底边需露出至少 8 个逻辑点";
+"Accessibility access required; use Grant Accessibility Access…" = "需要辅助功能权限";
+"Could not create the event tap; check permissions and retry" = "请检查辅助功能权限并重试";
+"Waiting for idle input before moving the Dock" = "等待输入空闲";
+"Idle wait timed out; use Move Dock / Retry" = "等待超时，请重试";
+"Dock confirmed on external display; guarding" = "Dock 已在外接屏";
+"Moving the Dock; move the mouse to interrupt" = "正在迁入 Dock，移动鼠标可中断";
+"Could not read the Dock position; check visually and retry" = "无法读取 Dock 位置，请目视确认";
+"Dock move failed; check display arrangement and retry" = "迁入失败，请检查显示器排列";
+
+/* Event names shown beside the blocked-move count. */
+"Launch" = "启动";
+"Manual retry" = "手动重试";
+"Locking toggled" = "锁定开关变化";
+"Permissions changed" = "权限变化";
+"Displays changed" = "显示器变化";
+"Wake / unlock" = "唤醒 / 解锁";
+"Dock launched" = "Dock 启动";

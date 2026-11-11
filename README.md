@@ -13,6 +13,9 @@ It helps keep the Dock on an external display, including layouts where that
 display sits above a MacBook. Disconnect the external display and the built-in
 display resumes normal Dock behavior.
 
+The interface supports English and Simplified Chinese and follows your macOS app
+language. Restart DockPup after changing the language.
+
 **Experimental:** Dock placement uses pointer automation and depends on macOS
 behavior. Recovery is best effort, especially while displays reconnect or wake.
 
@@ -22,6 +25,7 @@ behavior. Recovery is best effort, especially while displays reconnect or wake.
 - Guards exposed bottom edges on the other display to discourage Dock migration.
 - Rechecks placement after display changes, sleep, wake, unlock, or a Dock restart.
 - Provides pause, retry, status, and a blocked-move count in the menu bar.
+- Offers an optional **Launch at Login** switch in the menu bar.
 
 Recovery briefly moves the pointer; moving or clicking interrupts that movement, and recovery can retry
 after input becomes idle. DockPup does not change Dock preferences or display
@@ -86,7 +90,10 @@ license, and applies an ad hoc signature. The resulting app is not notarized.
 4. Enable DockPup in **System Settings → Privacy & Security → Accessibility**.
    macOS may also present a device-control permission prompt.
 5. Choose **Move Dock / Retry**, close the menu, and leave input idle for about
-   one second. Watch for **Dock confirmed on external display; guarding**.
+   one second. Watch for **Dock on external display**.
+6. To start DockPup automatically when you log in, enable **Launch at Login**.
+   If approval is required, the app opens System Settings to Login Items.
+   Keep the app in **Applications** so the login item can find it.
 
 The app attempts to restore the pointer after recovery. Input during recovery
 discards the saved position so the pointer is not pulled back while you use it.

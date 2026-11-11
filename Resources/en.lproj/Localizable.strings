@@ -1,0 +1,43 @@
+/* Copyright (C) 2026 Gwokhou
+ * SPDX-License-Identifier: GPL-3.0-or-later */
+
+/* Menu controls and information. */
+"Enable Locking" = "Enable Locking";
+"Launch at Login" = "Launch at Login";
+"Launch at Login (Approval Required…)" = "Launch at Login (Approval Needed…)";
+"Move Dock / Retry" = "Move Dock / Retry";
+"Grant Accessibility Access…" = "Grant Accessibility Access…";
+"Quit DockPup" = "Quit DockPup";
+"Target: %@" = "Target: %@";
+"Blocked: %ld · Last event: %@" = "Blocked: %ld · Last event: %@";
+"DockPup: %@" = "DockPup: %@";
+"Could Not Update Launch at Login" = "Could Not Update Launch at Login";
+
+/* Concise display text for the controller's English diagnostic messages. */
+"Starting" = "Starting…";
+"Waiting for a display" = "Waiting for a display";
+"No display detected" = "No display detected";
+"Paused" = "Paused";
+"Sleeping; waiting to wake" = "Waiting to wake";
+"Single display; no guarding needed" = "Single display";
+"Only one external display is supported" = "Only one external display supported";
+"Set the system Dock position to Bottom" = "Set Dock to Bottom";
+"Enable ‘Displays have separate Spaces’" = "Enable separate Spaces";
+"Offset the displays to expose at least 8 points of the external display’s bottom edge" = "Expose at least 8 pt of the external display’s bottom edge";
+"Accessibility access required; use Grant Accessibility Access…" = "Accessibility access required";
+"Could not create the event tap; check permissions and retry" = "Check Accessibility access and retry";
+"Waiting for idle input before moving the Dock" = "Waiting for idle input";
+"Idle wait timed out; use Move Dock / Retry" = "Idle wait timed out; retry";
+"Dock confirmed on external display; guarding" = "Dock on external display";
+"Moving the Dock; move the mouse to interrupt" = "Moving Dock; move mouse to cancel";
+"Could not read the Dock position; check visually and retry" = "Dock position unavailable; check visually";
+"Dock move failed; check display arrangement and retry" = "Could not move Dock; check layout";
+
+/* Event names shown beside the blocked-move count. */
+"Launch" = "Launch";
+"Manual retry" = "Manual retry";
+"Locking toggled" = "Locking toggled";
+"Permissions changed" = "Permissions changed";
+"Displays changed" = "Displays changed";
+"Wake / unlock" = "Wake / unlock";
+"Dock launched" = "Dock launched";

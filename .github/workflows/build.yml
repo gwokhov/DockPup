@@ -19,11 +19,11 @@ jobs:
       - name: Check build inputs
         run: |
           bash -n scripts/build.sh
-          plutil -lint Resources/Info.plist
+          plutil -lint Resources/Info.plist Resources/*.lproj/Localizable.strings
       - name: Build
         run: bash scripts/build.sh
       - name: Verify app bundle
         run: |
-          plutil -lint .build/DockPup.app/Contents/Info.plist
+          plutil -lint .build/DockPup.app/Contents/Info.plist .build/DockPup.app/Contents/Resources/*.lproj/Localizable.strings
           codesign --verify --strict --verbose=2 .build/DockPup.app
           cmp LICENSE .build/DockPup.app/Contents/Resources/LICENSE
