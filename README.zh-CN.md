@@ -33,6 +33,18 @@ DockPup 是使用 Swift 和 AppKit 编写的轻量菜单栏应用，无第三方
 
 实际 CPU、内存和能耗取决于输入活动、显示器配置与 macOS 版本。
 
+## 下载
+
+[下载 Apple Silicon 版本](https://github.com/gwokhov/DockPup/releases/latest/download/DockPup-arm64.zip)
+· [版本说明与校验文件](https://github.com/gwokhov/DockPup/releases/latest)
+
+先退出正在运行的版本，解压后将 **DockPup.app** 移入“应用程序”，
+打开并按[初次设置](#初次设置)授予辅助功能权限。
+预编译安装包适用于 Apple Silicon（arm64），暂不提供 Intel 版本。
+
+发布版本采用临时签名，未经 Apple 公证。macOS 可能阻止首次打开；
+请先阅读 [Apple 关于安全打开应用的说明](https://support.apple.com/en-us/102445)，再决定是否打开。
+
 ## 使用条件
 
 - 部署目标为 macOS 13 及以上。硬件行为仅在 Apple Silicon、macOS 26.5.2 上检查过；
@@ -75,7 +87,7 @@ open .build/DockPup.app
 ## 常见问题与限制
 
 - **权限开关已开，仍提示授权：** 临时签名可能随构建变化。退出应用，在辅助功能中移除
-  DockPup，重新添加当前 `.build/DockPup.app`、开启权限并重新运行。尽量保持应用路径一致。
+  DockPup，重新添加当前的 `DockPup.app`、开启权限并重新运行。尽量保持应用路径一致。
 - **Dock 没有迁入：** 核对使用条件，等显示器排列稳定后再重试。空闲等待上限 20 秒，
   单次移动上限 3 秒。无法读取位置或迁入失败时需要目视确认；编译成功不能替代实机验证。
 - **底边操作受影响：** 非目标屏暴露底边的一条窄区域会改变光标行为，可能影响底边控件

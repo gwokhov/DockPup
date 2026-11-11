@@ -36,6 +36,19 @@ arrangement settings.
 Actual CPU, memory, and energy use depend on input activity, display setup,
 and macOS version.
 
+## Download
+
+[Download for Apple Silicon](https://github.com/gwokhov/DockPup/releases/latest/download/DockPup-arm64.zip)
+· [Release notes and checksums](https://github.com/gwokhov/DockPup/releases/latest)
+
+Quit any running copy, unzip the download, and move **DockPup.app** to
+**Applications**. Open it and follow [Setup](#setup) to grant Accessibility access.
+The prebuilt app is for Apple Silicon (arm64); Intel builds are not provided.
+
+Release builds are ad hoc signed and are not notarized by Apple. macOS may block
+the first launch; review [Apple's guidance on safely opening apps](https://support.apple.com/en-us/102445)
+before deciding whether to open it.
+
 ## Requirements
 
 - macOS 13 or later as the deployment target. Hardware behavior has been checked
@@ -84,7 +97,7 @@ discards the saved position so the pointer is not pulled back while you use it.
 
 Ad hoc signatures can change between builds, making an existing permission entry
 stop matching the app. Quit DockPup, remove its entry from Accessibility, add the
-current `.build/DockPup.app` again, enable access, and relaunch it. Keep the app
+current copy of `DockPup.app` again, enable access, and relaunch it. Keep the app
 at a consistent path.
 
 ### The Dock does not move
