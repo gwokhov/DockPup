@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Check build inputs
+        run: |
+          bash -n scripts/build.sh
+          plutil -lint Resources/Info.plist
+      - name: Build
+        run: bash scripts/build.sh
+      - name: Verify app bundle
+        run: |
+          plutil -lint .build/LockDog.app/Contents/Info.plist
+          codesign --verify --strict --verbose=2 .build/LockDog.app
+          cmp LICENSE .build/LockDog.app/Contents/Resources/LICENSE
