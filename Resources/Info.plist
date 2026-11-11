@@ -5,13 +5,14 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleExecutable</key>
-    <string>LockDog</string>
+    <string>DockPup</string>
     <key>CFBundleIdentifier</key>
+    <!-- Keep the system identity stable across display-name changes. -->
     <string>local.g.lockdog</string>
     <key>CFBundleName</key>
-    <string>LockDog</string>
+    <string>DockPup</string>
     <key>CFBundleDisplayName</key>
-    <string>LockDog</string>
+    <string>DockPup</string>
     <key>CFBundleIconFile</key>
     <string>AppIcon.icns</string>
     <key>CFBundlePackageType</key>

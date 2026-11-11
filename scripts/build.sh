@@ -5,7 +5,7 @@
 set -euo pipefail
 
 project_dir="$(cd "$(dirname "$0")/.." && pwd)"
-app_dir="$project_dir/.build/LockDog.app"
+app_dir="$project_dir/.build/DockPup.app"
 iconset_dir="$project_dir/.build/AppIcon.iconset"
 mkdir -p "$app_dir/Contents/MacOS" "$app_dir/Contents/Resources" "$project_dir/.build/module-cache" "$iconset_dir"
 
@@ -19,8 +19,8 @@ iconutil --convert icns "$iconset_dir" --output "$app_dir/Contents/Resources/App
 xcrun swiftc -O -swift-version 5 \
     -target "$(uname -m)-apple-macosx13.0" \
     -module-cache-path "$project_dir/.build/module-cache" \
-    "$project_dir"/Sources/LockDog/*.swift \
-    -o "$app_dir/Contents/MacOS/LockDog"
+    "$project_dir"/Sources/DockPup/*.swift \
+    -o "$app_dir/Contents/MacOS/DockPup"
 cp "$project_dir/Resources/Info.plist" "$app_dir/Contents/Info.plist"
 cp "$project_dir/LICENSE" "$app_dir/Contents/Resources/LICENSE"
 codesign --force --sign - --identifier local.g.lockdog "$app_dir"

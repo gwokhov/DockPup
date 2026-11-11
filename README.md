@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="Resources/AppIcon.png" width="128" height="128" alt="LockDog icon">
+  <img src="Resources/AppIcon.png" width="128" height="128" alt="DockPup icon">
 </p>
 
-# LockDog
+# DockPup
 
 Keep the macOS system Dock on your external display.
 
 English · [简体中文](README.zh-CN.md)
 
-LockDog is a small, dependency-free menu bar app built with Swift and AppKit.
+DockPup is a small, dependency-free menu bar app built with Swift and AppKit.
 It helps keep the Dock on an external display, including layouts where that
 display sits above a MacBook. Disconnect the external display and the built-in
 display resumes normal Dock behavior.
@@ -24,7 +24,7 @@ behavior. Recovery is best effort, especially while displays reconnect or wake.
 - Provides pause, retry, status, and a blocked-move count in the menu bar.
 
 Recovery briefly moves the pointer; moving or clicking interrupts that movement, and recovery can retry
-after input becomes idle. LockDog does not change Dock preferences or display
+after input becomes idle. DockPup does not change Dock preferences or display
 arrangement settings.
 
 ## Lightweight by design
@@ -46,7 +46,7 @@ and macOS version.
 - At least 8 logical points of exposed bottom edge on the external display.
   For vertically stacked displays, offset them horizontally in the arrangement
   so part of the upper display's bottom edge is not shared with the lower display.
-- Accessibility access for the current build of LockDog.
+- Accessibility access for the current build of DockPup.
 
 ## Build and run
 
@@ -57,7 +57,7 @@ From the repository root:
 
 ```sh
 bash scripts/build.sh
-open .build/LockDog.app
+open .build/DockPup.app
 ```
 
 Quit a running development copy before rebuilding it. The script builds the host
@@ -68,9 +68,9 @@ license, and applies an ad hoc signature. The resulting app is not notarized.
 
 1. Pause or quit other Dock-locking utilities.
 2. Configure the Dock, separate Spaces, and display arrangement as described above.
-3. Open LockDog's display icon in the menu bar and choose
+3. Open DockPup's display icon in the menu bar and choose
    **Grant Accessibility Access…**.
-4. Enable LockDog in **System Settings → Privacy & Security → Accessibility**.
+4. Enable DockPup in **System Settings → Privacy & Security → Accessibility**.
    macOS may also present a device-control permission prompt.
 5. Choose **Move Dock / Retry**, close the menu, and leave input idle for about
    one second. Watch for **Dock confirmed on external display; guarding**.
@@ -80,11 +80,11 @@ discards the saved position so the pointer is not pulled back while you use it.
 
 ## Troubleshooting and limits
 
-### Access is enabled, but LockDog still requests permission
+### Access is enabled, but DockPup still requests permission
 
 Ad hoc signatures can change between builds, making an existing permission entry
-stop matching the app. Quit LockDog, remove its entry from Accessibility, add the
-current `.build/LockDog.app` again, enable access, and relaunch it. Keep the app
+stop matching the app. Quit DockPup, remove its entry from Accessibility, add the
+current `.build/DockPup.app` again, enable access, and relaunch it. Keep the app
 at a consistent path.
 
 ### The Dock does not move
@@ -110,7 +110,7 @@ retain an older icon even after the bundle's icon has updated.
 
 Accessibility access is used to read the Dock's position and intercept or post
 mouse events. Recovery checks elapsed time since the last key-down event without
-reading which key was pressed. LockDog does not record raw input, save pointer
+reading which key was pressed. DockPup does not record raw input, save pointer
 positions to disk, or make network requests. Application logs contain status
 messages and recovery reasons.
 
@@ -134,7 +134,7 @@ Created and maintained by [Gwokhou](https://github.com/gwokhov).
 
 Copyright © 2026 Gwokhou.
 
-LockDog is free software licensed under the GNU General Public License,
+DockPup is free software licensed under the GNU General Public License,
 version 3 or, at your option, any later version (**GPL-3.0-or-later**).
 See [LICENSE](LICENSE) for the complete terms. This project is distributed
 without warranty.

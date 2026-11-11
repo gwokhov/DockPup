@@ -24,6 +24,6 @@ jobs:
         run: bash scripts/build.sh
       - name: Verify app bundle
         run: |
-          plutil -lint .build/LockDog.app/Contents/Info.plist
-          codesign --verify --strict --verbose=2 .build/LockDog.app
-          cmp LICENSE .build/LockDog.app/Contents/Resources/LICENSE
+          plutil -lint .build/DockPup.app/Contents/Info.plist
+          codesign --verify --strict --verbose=2 .build/DockPup.app
+          cmp LICENSE .build/DockPup.app/Contents/Resources/LICENSE

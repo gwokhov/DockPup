@@ -13,7 +13,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        item.button?.image = NSImage(systemSymbolName: "display", accessibilityDescription: "LockDog")
+        item.button?.image = NSImage(systemSymbolName: "display", accessibilityDescription: "DockPup")
         let menu = NSMenu()
         menu.delegate = self
         menu.autoenablesItems = false
@@ -21,7 +21,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(.separator())
         enabled.target = self
         menu.addItem(enabled)
-        for (title, action) in [("Move Dock / Retry", #selector(retry)), ("Grant Accessibility Access…", #selector(authorize)), ("Quit LockDog", #selector(quit))] {
+        for (title, action) in [("Move Dock / Retry", #selector(retry)), ("Grant Accessibility Access…", #selector(authorize)), ("Quit DockPup", #selector(quit))] {
             let entry = NSMenuItem(title: title, action: action, keyEquivalent: "")
             entry.target = self
             menu.addItem(entry)
@@ -44,7 +44,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         target.title = "Target: \(controller.targetName)"
         counters.title = "Blocked moves: \(controller.blockedMoves) · Last event: \(controller.lastReason)"
         enabled.state = controller.enabled ? .on : .off
-        item.button?.toolTip = "LockDog: \(controller.status)"
+        item.button?.toolTip = "DockPup: \(controller.status)"
     }
 
     @objc private func toggle() { controller.toggle() }

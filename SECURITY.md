@@ -1,6 +1,6 @@
 # Security
 
-LockDog runs with Accessibility access so it can inspect the Dock and modify
+DockPup runs with Accessibility access so it can inspect the Dock and modify
 mouse events. Treat permission handling and input behavior as security-sensitive.
 
 ## Reporting a vulnerability

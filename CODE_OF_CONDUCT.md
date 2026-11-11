@@ -1,6 +1,6 @@
 # Community Guidelines
 
-Help make LockDog a respectful place to collaborate:
+Help make DockPup a respectful place to collaborate:
 
 - Be considerate and constructive. Critique ideas and code, not people.
 - Welcome contributors with different backgrounds and levels of experience.

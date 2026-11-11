@@ -15,7 +15,7 @@ Describe the behavior and what you expected instead.
 
 ## Environment
 
-- LockDog revision:
+- DockPup revision:
 - macOS version and CPU architecture:
 - Number and arrangement of displays:
 - Dock position and auto-hide setting:

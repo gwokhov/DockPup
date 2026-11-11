@@ -1,16 +1,16 @@
-# Contributing to LockDog
+# Contributing to DockPup
 
 Bug reports, documentation improvements, and focused pull requests are welcome.
 Please discuss substantial behavior changes in an issue before implementing them.
 
 ## Development
 
-Use macOS with Xcode or the Command Line Tools installed. LockDog has no
+Use macOS with Xcode or the Command Line Tools installed. DockPup has no
 third-party dependencies or package installation step.
 
 ```sh
 bash scripts/build.sh
-open .build/LockDog.app
+open .build/DockPup.app
 ```
 
 Quit a running development copy before rebuilding it. The script builds for the
@@ -19,12 +19,15 @@ Accessibility permission refreshed; see the README.
 
 ## Project layout
 
-- `Sources/LockDog/main.swift`: app lifecycle and menu bar controls.
-- `Sources/LockDog/DockController.swift`: event tap, Dock movement, and recovery.
-- `Sources/LockDog/Display.swift`: display geometry and exposed bottom edges.
+- `Sources/DockPup/main.swift`: app lifecycle and menu bar controls.
+- `Sources/DockPup/DockController.swift`: event tap, Dock movement, and recovery.
+- `Sources/DockPup/Display.swift`: display geometry and exposed bottom edges.
 - `Resources/AppIcon.png`: editable raster artwork; the build generates ICNS sizes.
 - `Resources/Info.plist`: application metadata.
 - `scripts/build.sh`: native build, icon generation, and local signing.
+
+The bundle identifier `local.g.lockdog` is a stable system identity, independent
+of the app's display name. The same identifier is used for application logging.
 
 ## Before opening a pull request
 
@@ -33,8 +36,8 @@ Run the packaging checks:
 ```sh
 bash -n scripts/build.sh
 bash scripts/build.sh
-plutil -lint Resources/Info.plist .build/LockDog.app/Contents/Info.plist
-codesign --verify --strict --verbose=2 .build/LockDog.app
+plutil -lint Resources/Info.plist .build/DockPup.app/Contents/Info.plist
+codesign --verify --strict --verbose=2 .build/DockPup.app
 git diff --check
 ```
 

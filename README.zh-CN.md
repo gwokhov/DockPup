@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="Resources/AppIcon.png" width="128" height="128" alt="LockDog 图标">
+  <img src="Resources/AppIcon.png" width="128" height="128" alt="DockPup 图标">
 </p>
 
-# LockDog
+# DockPup
 
 让 macOS 系统 Dock 留在外接显示器上。
 
 [English](README.md) · 简体中文
 
-LockDog 是使用 Swift 和 AppKit 编写的轻量菜单栏应用，无第三方依赖。
+DockPup 是使用 Swift 和 AppKit 编写的轻量菜单栏应用，无第三方依赖。
 适用于 MacBook 内屏与单个外接屏，尤其是外接屏位于内屏上方的排列。
 断开外接屏后，内屏恢复正常的 Dock 行为。
 
@@ -42,7 +42,7 @@ LockDog 是使用 Swift 和 AppKit 编写的轻量菜单栏应用，无第三方
 - 开启“显示器具有单独的空间”。
 - 外接屏底边至少露出 8 个逻辑点。上下排列时，可在系统排列中稍微水平错开，
   让上屏的一段底边不与下屏共享。
-- 为当前构建的 LockDog 授予辅助功能权限。
+- 为当前构建的 DockPup 授予辅助功能权限。
 
 ## 构建与运行
 
@@ -53,7 +53,7 @@ LockDog 是使用 Swift 和 AppKit 编写的轻量菜单栏应用，无第三方
 
 ```sh
 bash scripts/build.sh
-open .build/LockDog.app
+open .build/DockPup.app
 ```
 
 重建前先退出正在运行的开发版本。脚本为当前 Mac 的架构编译，
@@ -65,7 +65,7 @@ open .build/LockDog.app
 1. 暂停或退出其他 Dock 锁定工具。
 2. 按上述条件设置 Dock、独立空间与显示器排列。
 3. 打开菜单栏的显示器图标，选择 **Grant Accessibility Access…**。
-4. 在“系统设置 → 隐私与安全性 → 辅助功能”中开启 LockDog。
+4. 在“系统设置 → 隐私与安全性 → 辅助功能”中开启 DockPup。
    macOS 也可能弹出设备控制权限提示。
 5. 点击 **Move Dock / Retry**，关闭菜单，静置输入约一秒。
    看到 **Dock confirmed on external display; guarding** 表示已确认 Dock 在外屏。
@@ -75,7 +75,7 @@ open .build/LockDog.app
 ## 常见问题与限制
 
 - **权限开关已开，仍提示授权：** 临时签名可能随构建变化。退出应用，在辅助功能中移除
-  LockDog，重新添加当前 `.build/LockDog.app`、开启权限并重新运行。尽量保持应用路径一致。
+  DockPup，重新添加当前 `.build/DockPup.app`、开启权限并重新运行。尽量保持应用路径一致。
 - **Dock 没有迁入：** 核对使用条件，等显示器排列稳定后再重试。空闲等待上限 20 秒，
   单次移动上限 3 秒。无法读取位置或迁入失败时需要目视确认；编译成功不能替代实机验证。
 - **底边操作受影响：** 非目标屏暴露底边的一条窄区域会改变光标行为，可能影响底边控件
